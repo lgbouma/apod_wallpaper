@@ -30,7 +30,7 @@ link_list = [link for link in link_list if 'http:' not in link and '.jpg' in lin
 assert len(link_list) == 1, 'else i need to debug'
 image_url = 'http://apod.nasa.gov/apod/'+link_list[0]
 
-save_name = '/home/lgbouma/Dropbox/apod_desktop/images/'+today_str+'-'+image_url.split('/')[-1]
+save_name = '/home/lgbouma/Dropbox/apod_wallpaper/images/'+today_str+'-'+image_url.split('/')[-1]
 urllib.urlretrieve(image_url, save_name)
 
 print 'gsettings set org.gnome.desktop.background picture-uri file://'+save_name
